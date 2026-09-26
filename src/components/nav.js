@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'gatsby';
+import { Link, withPrefix } from 'gatsby';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled, { css } from 'styled-components';
@@ -34,8 +34,8 @@ const StyledHeader = styled.header`
   @media (prefers-reduced-motion: no-preference) {
     ${props =>
     props.scrollDirection === 'up' &&
-    !props.scrolledToTop &&
-    css`
+      !props.scrolledToTop &&
+      css`
         height: var(--nav-scroll-height);
         transform: translateY(0px);
         background-color: var(--nav-bg);
@@ -44,8 +44,8 @@ const StyledHeader = styled.header`
 
     ${props =>
     props.scrollDirection === 'down' &&
-    !props.scrolledToTop &&
-    css`
+      !props.scrolledToTop &&
+      css`
         height: var(--nav-scroll-height);
         transform: translateY(calc(var(--nav-scroll-height) * -1));
         box-shadow: 0 10px 30px -10px var(--navy-shadow);
@@ -206,7 +206,11 @@ const Nav = ({ isHome }) => {
   );
 
   const ResumeLink = (
-    <a className="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+    <a
+      className="resume-button"
+      href={withPrefix('/resume.pdf')}
+      target="_blank"
+      rel="noopener noreferrer">
       Resume
     </a>
   );
