@@ -1,12 +1,13 @@
 const config = require('./src/config');
 
 module.exports = {
+  // Required for GitHub Pages project sites: https://umairiqbal78.github.io/umair-iqbal-portfolio/
+  pathPrefix: '/umair-iqbal-portfolio',
   siteMetadata: {
     title: 'Umair Iqbal',
     description:
       'Umair Iqbal is a software engineer specializing in cross-platform Flutter development, with hands-on DevOps and cloud infrastructure experience.',
-    // TODO: replace with your real deployed URL once you have one (no trailing slash)
-    siteUrl: 'https://umairiqbal.example.com',
+    siteUrl: 'https://umairiqbal78.github.io',
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '',
   },
