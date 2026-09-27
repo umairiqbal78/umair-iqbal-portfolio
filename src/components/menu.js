@@ -267,7 +267,7 @@ const Menu = () => {
             )}
 
             <a
-              href={withPrefix('/resume.pdf')}
+              href={withPrefix('/software_engineer_umair.pdf')}
               className="resume-link"
               target="_blank"
               rel="noopener noreferrer">
