@@ -118,9 +118,11 @@ const About = () => {
 
   const skills = [
     'Flutter & Dart',
-    'BLoC / GetX',
+    'BLoC / GetX / Provider',
     'iOS & Android',
     'REST APIs & Firebase',
+    'Python (NumPy, Pandas, TensorFlow, boto3)',
+    'Django REST Framework',
     'AWS & Terraform',
     'CI/CD (GitHub Actions, Fastlane)',
   ];
